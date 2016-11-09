@@ -20,3 +20,6 @@ HEADERS  += mainwindow.h \
     filecontent.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES += \
+    .gitignore

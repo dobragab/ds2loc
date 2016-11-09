@@ -23,10 +23,14 @@ private slots:
 
     void on_comboBox_currentIndexChanged(int index);
 
+    void on_listWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+
 private:
     Ui::MainWindow *ui;
 
     FileContent filecontent;
+
+    LanguageContent& lang();
 };
 
 #endif // MAINWINDOW_H

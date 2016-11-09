@@ -7,6 +7,8 @@
 #include <iostream>
 #include <memory>
 
+#include <QListWidgetItem>
+
 struct StringMeta
 {
     uint64_t id;
@@ -29,6 +31,16 @@ struct LanguageContent
     QVector<uint64_t> str_sizes;
     QVector<QString> strings;
     std::string random;
+};
+
+struct StringItem : public QListWidgetItem
+{
+    int index;
+
+    StringItem(QString const& str, QListWidget *parent, int index)
+        : QListWidgetItem(str, parent)
+        , index(index)
+    { }
 };
 
 class FileContent
@@ -114,7 +126,9 @@ public:
             for(uint32_t j = 1; j < rand_cnt; ++j)
             {
                 if(j == 640)
-                    ;
+                {
+                    // if is only for breakpoint
+                }
 
                 std::size_t len = lc.str_sizes[j] - lc.str_sizes[j-1];
                 lc.strings.push_back(QString::fromUtf8(str, len - 1));

@@ -1,1 +1,7 @@
 *.user
+*.o
+ui_*.h
+moc_*.cpp
+Makefile
+.qmake*
+ds2loc
