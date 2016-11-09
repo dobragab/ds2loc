@@ -23,3 +23,5 @@ FORMS    += mainwindow.ui
 
 DISTFILES += \
     .gitignore
+
+QMAKE_CXXFLAGS += -std=c++14
